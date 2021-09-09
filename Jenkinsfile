@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Testing Git Check') {
       steps {
-          sh git status > current_state.csv
+          sh './getlog.sh'
       }
     }
   }
