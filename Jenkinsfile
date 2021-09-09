@@ -1,8 +1,8 @@
 pipeline {
-  agent none
+  agent any
   
   stages {
-    stage('Testing Git Check') {
+    stage('Testing') {
       steps {
           sh './getlog.sh'
       }
