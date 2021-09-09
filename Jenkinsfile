@@ -1,5 +1,5 @@
 pipeline {
-  agent {label 'gitcheck'}
+  agent none
   
   stages {
     stage('Testing Git Check') {
