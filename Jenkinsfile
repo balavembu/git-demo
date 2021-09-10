@@ -12,7 +12,9 @@ pipeline {
     
     stage('Test') {
       steps {
-          sh 'git log --oneline --graph --decorate --color'
+          script {
+            env.GIT_COMMIT_MSG = sh (script: 'git log -1 --pretty=%B ${GIT_COMMIT}', returnStdout: true).trim()
+        }
       }
     }
   }
