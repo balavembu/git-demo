@@ -2,9 +2,10 @@ pipeline {
   agent any
   
   stages {
-    stage('Testing') {
+    stage('Build') {
       steps {
-          sh './getlog.sh'
+          git log --oneline --graph --decorate --color  
+        // sh './getlog.sh'
       }
     }
   }
