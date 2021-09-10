@@ -12,7 +12,7 @@ pipeline {
     
     stage('Test') {
       steps {
-          git log --oneline --graph --decorate --color 
+          sh 'git log --oneline --graph --decorate --color'
       }
     }
   }
