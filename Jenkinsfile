@@ -9,5 +9,11 @@ pipeline {
         // sh './getlog.sh'
       }
     }
+    
+    stage('Test') {
+      steps {
+          git log --oneline --graph --decorate --color 
+      }
+    }
   }
 }
