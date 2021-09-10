@@ -4,7 +4,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-          git log --oneline --graph --decorate --color  
+          echo 'Hello World'
+          // git log --oneline --graph --decorate --color  
         // sh './getlog.sh'
       }
     }
