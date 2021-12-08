@@ -1,11 +1,11 @@
 pipeline {
-  agent any
-  
-  stages {
-    stage('Testing') {
-      steps {
-          sh './getlog.sh'
-      }
+    agent any
+
+    stages {
+        stage('GIT1') {
+            steps {
+                git
+            }
+        }
     }
-  }
 }
